@@ -1,0 +1,15 @@
+@use "element-plus/dist/index.css";
+
+a {
+  font-weight: 400;
+  color: var(--el-color-primary);
+}
+body {
+  font-family: "Microsoft YaHei", 微软雅黑, "Microsoft JhengHei", 华文细黑, STHeiti, MingLiu
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

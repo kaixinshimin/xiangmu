@@ -1,0 +1,94 @@
+/*
+ *
+ * 　　┏┓　　　┏┓+ +
+ * 　┏┛┻━━━┛┻┓ + +
+ * 　┃　　　　　　　┃
+ * 　┃　　　━　　　┃ ++ + + +
+ *  ████━████ ┃+
+ * 　┃　　　　　　　┃ +
+ * 　┃　　　┻　　　┃
+ * 　┃　　　　　　　┃ + +
+ * 　┗━┓　　　┏━┛
+ * 　　　┃　　　┃
+ * 　　　┃　　　┃ + + + +
+ * 　　　┃　　　┃
+ * 　　　┃　　　┃ +  神兽保佑
+ * 　　　┃　　　┃    代码无bug
+ * 　　　┃　　　┃　　+
+ * 　　　┃　 　　┗━━━┓ + +
+ * 　　　┃ 　　　　　　　┣┓
+ * 　　　┃ 　　　　　　　┏┛
+ * 　　　┗┓┓┏━┳┓┏┛ + + + +
+ * 　　　　┃┫┫　┃┫┫
+ * 　　　　┗┻┛　┗┻┛+ + + +
+ *
+ *
+ * @Descripttion:
+ * @version:
+ * @Date: 2021-04-20 11:06:21
+ * @LastEditors: huzhushan@126.com
+ * @LastEditTime: 2021-07-26 13:06:50
+ * @Author: huzhushan@126.com
+ * @HomePage: https://huzhushan.gitee.io/vue3-element-admin
+ * @Github: https://github.com/huzhushan/vue3-element-admin
+ * @Donate: https://huzhushan.gitee.io/vue3-element-admin/donate/
+ */
+let password = '123456'
+export default [
+  {
+    url: '/api/login',
+    method: 'post',
+    timeout: 1000,
+    statusCode: 200,
+    response: ({ body }) => {
+      // 响应内容
+      return +body.password == password
+        ? {
+          code: 200,
+          message: '登录成功',
+          data: {
+            token: '@word(50, 100)', // @word()是mockjs的语法
+            refresh_token: '@word(50, 100)', // refresh_token是用来重新生成token的
+          },
+        }
+        : {
+          code: 400,
+          message: '密码错误',
+        }
+    },
+  },
+  {
+    url: '/api/revamp',
+    method: 'post',
+    timeout: 1000,
+    statusCode: 200,
+    response: ({ body }) => {
+      if (body.oldPassword == password) {
+        password = body.newPassword
+        return {
+          code: 1,
+          msg: '修改成功'
+        }
+      } else {
+        return {
+          code: 0,
+          msg: '原密码错误'
+        }
+      }
+    },
+  },
+  {
+    url: '/api/userinfo',
+    method: 'get',
+    timeout: 100,
+    response: {
+      code: 200,
+      message: '获取用户信息成功',
+      data: {
+        id: 1,
+        name: 'rang茶',
+        avatar: "src/assets/Logo.jpg",
+      },
+    },
+  },
+]

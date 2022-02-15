@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+textarea {
+  outline: none;
+}
+input {
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+select {
+  outline: none;
+}
+img {
+  border: none;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+body {
+  width: 100%;
+  color: #3e3e3e;
+  font-size: 12px;
+}
+/*商品*/
+.container {
+  background: url(../img/bgimg.webp) no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.container .slider {
+  min-height: 0;
+}
+.container .content {
+  height: 100%;
+  width: 100%;
+  background-color: #F7F7F7;
+  padding-top: 80px;
+}
+.container .content .mainbody {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.container .content .mainbody .title1 {
+  padding: 10px 0;
+}
+.container .content .mainbody .title1 #p1 {
+  font-size: 24px;
+  font-family: '微软雅黑';
+  width: 96px;
+  height: 36px;
+  text-align: center;
+  margin: auto;
+}
+.container .content .mainbody .title1 #p2 {
+  font-size: 13px;
+  color: #999999;
+  width: 96px;
+  height: 17px;
+  text-align: center;
+  margin: auto;
+}
+.container .content .mainbody .goodslist {
+  display: flex;
+  width: 33.33%;
+  height: 88%;
+  flex-wrap: wrap;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+.container .content .mainbody .goodslist .goods {
+  width: 100%;
+  display: inline-block;
+  height: 50%;
+  text-align: center;
+}
+.container .content .mainbody .goodslist .goods a {
+  width: 100%;
+  height: 100%;
+}
+.container .content .mainbody .goodslist .goods a img {
+  width: 100%;
+  max-width: 400px;
+}
+.container .content .mainbody .goodslist .goods a .goodstitle {
+  font-size: 16px;
+  color: #555555;
+}
+.container .content .mainbody .goodslist .goods a:hover .line {
+  width: 100%;
+  height: 1px;
+  background: #519F10;
+}
+.container .content .mainbody .goodslist .goods a .line {
+  width: 0;
+  height: 1px;
+  background-color: #519F10;
+  margin-top: 20px;
+  transition: all 1s;
+}
+.container .content .mainbody .goodslist .goods .price {
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: #666;
+}
+.container .content .mainbody .more {
+  width: 100%;
+  text-align: center;
+}
+.container .content .mainbody .more button {
+  height: 40px;
+  width: 80px;
+  background-color: #90AF6B;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  font-size: 28px;
+  font-family: '微软雅黑';
+  color: white;
+  font-weight: 300;
+  margin: auto;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+.container .content .about {
+  width: 100%;
+  height: 300px;
+  background-color: red;
+  opacity: 0;
+}
+.container .about {
+  height: 700px;
+  width: 100%;
+  padding-top: 100px;
+}
+.container .about .secondbody {
+  height: 80%;
+  width: 90%;
+  margin: auto;
+}
+.container .about .secondbody .title1 {
+  padding: 20px 0;
+}
+.container .about .secondbody .title1 #p1 {
+  font-size: 24px;
+  font-family: '微软雅黑';
+  width: 96px;
+  height: 36px;
+  text-align: center;
+  color: white;
+  margin: auto;
+}
+.container .about .secondbody .title1 #p2 {
+  font-size: 13px;
+  color: white;
+  width: 96px;
+  height: 17px;
+  text-align: center;
+  margin: auto;
+}
+.container .about .secondbody .info {
+  height: 300px;
+  width: 1190px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 30px;
+  background-color: white;
+  display: flex;
+}
+.container .about .secondbody .info .infoleft {
+  flex: 9;
+  margin-right: 50px;
+}
+.container .about .secondbody .info .infoleft img {
+  width: 100%;
+  height: 100%;
+}
+.container .about .secondbody .info .inforight {
+  flex: 10;
+  height: 120px;
+  position: relative;
+}
+.container .about .secondbody .info .inforight span {
+  font-size: 14px;
+  width: 90%;
+  color: #808080;
+  position: absolute;
+  top: 40px;
+  line-height: 35px;
+}
+.container .about .secondbody .info .inforight button {
+  position: absolute;
+  top: 200px;
+  height: 40px;
+  width: 110px;
+  background-color: #90AF6B;
+  text-align: center;
+  line-height: 40px;
+  border: none;
+  font-size: 14px;
+  font-family: '微软雅黑';
+  color: white;
+  cursor: pointer;
+}

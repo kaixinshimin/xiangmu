@@ -1,0 +1,119 @@
+.contant{
+    width: 1076px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    color: #5e5e5e;
+
+    .left{
+        width: 318px;
+        display: table-cell;
+        box-sizing: border-box;
+        border: 1px solid rgb(221, 221, 221);
+        .head{
+            padding: 15px;
+            height: 100px;
+            box-sizing: border-box;
+            border-bottom:1px solid rgb(221, 221, 221) ;
+            .face{
+                width: 70px;
+                height: 70px;
+                border-radius: 35px;
+                border: 1px solid rgb(221, 221, 221);
+                display: inline-block;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+           div{
+               display: inline-block;
+               vertical-align: top;
+               height: 70px;
+               margin-left: 10px;
+               color: #5e5e5e;
+               overflow: hidden;
+                .xiugai{
+                    border:1px solid rgb(221, 221, 221);
+                    font-size: 12px;
+                    margin-right: 5px;
+                    cursor: pointer;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                .zhanghao{
+                    display: inline-block;
+                    margin-top: 10px;
+                    cursor: pointer;
+                    .elicon{
+                        margin-left: 5px;
+                        vertical-align: middle;
+                    }
+                    span{
+                        vertical-align: middle;
+
+                    }
+                }
+                
+           }
+        }
+        .list{
+            cursor: pointer;
+            height:44px;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgb(221, 221, 221);
+            padding: 10px;
+            &:hover{
+                .spleft{
+                font-weight: bold;
+                }
+            }
+            .elicon{
+                margin-right: 5px;
+            }
+            .spleft{
+                vertical-align: middle;
+            }
+            .spright{
+            float: right;
+            }
+            div{
+                display: inline-block;
+                margin-top: 2px;
+                float: right;
+                font-size: 16px;
+            }
+            .number{
+                width:30px ;
+                height: 20px;
+                display: inline-block;
+                background-color: #DDDDDD;
+                float: right;
+                margin-top: 3px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .middle{
+        width: 20px;
+        height: 100%;
+        display: table-cell;
+    }
+    .right{
+        padding-bottom: 15px;
+        flex: 1;
+        border: 1px solid rgb(221, 221, 221);
+        box-sizing: border-box;
+    }
+}
+
+.elicon{
+    vertical-align: middle;
+}
+.active{
+    .spleft{
+    font-weight: bold;
+    }
+}
